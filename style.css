@@ -1,0 +1,40 @@
+body {
+    overflow-x: hidden;
+    overflow-y: visible;
+    font-family: sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+svg {
+    margin: 30px 0 0 200px;
+    overflow: visible;
+}
+
+#tooltip {
+    font-size: 14px;
+    background: linear-gradient(45deg, skyblue, rgb(255, 0, 255));
+    color: rgba(1, 1, 124, 0.979);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    pointer-events: none;
+}
+
+#x-axis,
+#y-axis {
+    pointer-events: none;
+}
+
+#y-axis path {
+    stroke: none;
+}
