@@ -87,8 +87,8 @@ const render = async () => {
                 .attr("data-year", i[0])
                 .style("opacity", 0.9)
                 .style("position", "absolute")
-                .style("top", yScale(i[1] - 1) + 190 + "px")
-                .style("left", xScale(i[0]) + 220 + "px").html(`
+                .style("top", yScale(i[1] - 1) + 105 + "px")
+                .style("left", xScale(i[0]) + 175 + "px").html(`
                 <p>${months[i[1] - 1]} - ${i[0]}</p>
                 <p>Temperature: ${(8.66 + i[2]).toFixed(1)}℃</p>
                 <p>Variance: ${i[2]}℃</p>
