@@ -33,6 +33,7 @@ const render = async () => {
     ];
 
     const colors = [
+        "black",
         "#151B54",
         "#1E90FF",
         "#82CAFF",
@@ -43,6 +44,7 @@ const render = async () => {
         "#e69b00",
         "#e47200",
         "#ff2c2c",
+        "#A62A2A",
         "#8B0000",
     ];
 
@@ -76,7 +78,7 @@ const render = async () => {
         .attr("width", 5)
         .attr("height", 500 / 11)
         .style("fill", (d) => {
-            const temp = Math.floor(8.66 + d[2]) - 2;
+            const temp = Math.floor(8.66 + d[2]) - 1;
             return colors[temp];
         })
         .on("mouseover", (d, i) => {
@@ -100,7 +102,7 @@ const render = async () => {
         .select(".legend-container")
         .append("svg")
         .attr("id", "legend")
-        .attr("width", 550)
+        .attr("width", 650)
         .attr("height", 30);
 
     legend
@@ -126,8 +128,8 @@ const render = async () => {
         .attr("transform", "translate(0, -23)")
         .call(yAxis);
 
-    const xLegScale = d3.scaleLinear().domain([0, 11]).range([0, 550]);
-    const xLegAxis = d3.axisBottom(xLegScale).tickFormat((d, i) => i + 2 + "℃");
+    const xLegScale = d3.scaleLinear().domain([0, 13]).range([0, 650]);
+    const xLegAxis = d3.axisBottom(xLegScale).tickFormat((d, i) => i + 1 + "℃");
     legend.append("g").attr("transform", "translate(0, 65)").call(xLegAxis);
 };
 
